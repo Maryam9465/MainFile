@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.main {
+    overflow: hidden; /* Clear floats */
+    padding: 20px;
+}
+
+.sidebar {
+    width: 25%;
+    float: left;
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+.content {
+    width: 75%;
+    float: right;
+    background-color: #e2e2e2;
+    padding: 15px;
+}
+
+.footer {
+    clear: both;
+}
