@@ -1,38 +1,52 @@
-<!D<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Elements Showcase</title>
+    <title>Interactive HTML Elements</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Verdana', sans-serif;
+            background-color: #ececec;
             margin: 0;
             padding: 0;
         }
-        .wrapper {
-            width: 80%;
+        .container {
+            width: 90%;
             margin: 20px auto;
             padding: 20px;
             background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .header {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .box {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .box-header {
+            background: #007bff;
+            color: #ffffff;
+            padding: 15px;
             text-align: center;
-            margin-bottom: 30px;
         }
-        .header h1 {
-            margin: 0;
-            color: #333;
+        .box-content {
+            padding: 20px;
         }
-        .info-section {
-            margin-bottom: 30px;
-        }
-        .info-section span {
+        .box-content span {
+            color: #007bff;
             font-weight: bold;
-            color: #0056b3;
         }
         .color-table {
             width: 100%;
@@ -44,12 +58,12 @@
             text-align: center;
         }
         .color-table th {
-            background-color: #f2f2f2;
-            color: #333;
+            background-color: #007bff;
+            color: #ffffff;
         }
         .color-box {
-            height: 30px;
-            width: 30px;
+            height: 40px;
+            width: 40px;
             border-radius: 4px;
             display: inline-block;
         }
@@ -57,76 +71,76 @@
             margin-top: 20px;
         }
         .lists ul, .lists ol {
-            margin: 0;
-            padding: 0;
-            list-style-position: inside;
+            padding-left: 20px;
         }
         .lists li {
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-        }
-        .lists li:last-child {
-            border-bottom: none;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <h1>HTML Elements Showcase</h1>
-        </div>
+    <div class="container">
+        <div class="grid">
+            <!-- Span Example -->
+            <div class="box">
+                <div class="box-header">Span Example</div>
+                <div class="box-content">
+                    <p>This is an example of a <span>span element</span> used to highlight text within a paragraph.</p>
+                </div>
+            </div>
 
-        <!-- Span Example -->
-        <div class="info-section">
-            <p>This is an example of a <span>span element</span> used to highlight text in a paragraph.</p>
-        </div>
+            <!-- Color Table -->
+            <div class="box">
+                <div class="box-header">Color Table</div>
+                <div class="box-content">
+                    <table class="color-table">
+                        <thead>
+                            <tr>
+                                <th>Color Name</th>
+                                <th>Color Sample</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Red</td>
+                                <td><div class="color-box" style="background-color: red;"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Green</td>
+                                <td><div class="color-box" style="background-color: green;"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Blue</td>
+                                <td><div class="color-box" style="background-color: blue;"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Yellow</td>
+                                <td><div class="color-box" style="background-color: yellow;"></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-        <!-- Color Table -->
-        <div class="info-section">
-            <h2>Color Table</h2>
-            <table class="color-table">
-                <thead>
-                    <tr>
-                        <th>Color Name</th>
-                        <th>Color Sample</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Orange</td>
-                        <td><div class="color-box" style="background-color: orange;"></div></td>
-                    </tr>
-                    <tr>
-                        <td>Purple</td>
-                        <td><div class="color-box" style="background-color: purple;"></div></td>
-                    </tr>
-                    <tr>
-                        <td>Cyan</td>
-                        <td><div class="color-box" style="background-color: cyan;"></div></td>
-                    </tr>
-                    <tr>
-                        <td>Pink</td>
-                        <td><div class="color-box" style="background-color: pink;"></div></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <!-- Lists -->
+            <div class="box">
+                <div class="box-header">Lists</div>
+                <div class="box-content lists">
+                    <h3>Unordered List</h3>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
 
-        <!-- Lists -->
-        <div class="lists">
-            <h2>Unordered List</h2>
-            <ul>
-                <li>First item</li>
-                <li>Second item</li>
-                <li>Third item</li>
-            </ul>
-
-            <h2>Ordered List</h2>
-            <ol>
-                <li>First step</li>
-                <li>Second step</li>
-                <li>Third step</li>
-            </ol>
+                    <h3>Ordered List</h3>
+                    <ol>
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
 </body>
