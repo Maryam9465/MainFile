@@ -3,50 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive HTML Elements</title>
+    <title>Modern HTML Layout</title>
     <style>
         body {
-            font-family: 'Verdana', sans-serif;
-            background-color: #ececec;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5;
         }
         .container {
-            width: 90%;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            color: #333;
+        }
+        .section {
+            display: flex;
+            flex-wrap: wrap;
             gap: 20px;
         }
-        .box {
-            background: #f9f9f9;
-            border: 1px solid #ddd;
+        .section > div {
+            flex: 1;
+            min-width: 300px;
+            background: #ffffff;
             border-radius: 8px;
-            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        .box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        .section > div:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        .box-header {
-            background: #007bff;
-            color: #ffffff;
-            padding: 15px;
-            text-align: center;
-        }
-        .box-content {
-            padding: 20px;
-        }
-        .box-content span {
+        .section h2 {
+            margin-top: 0;
             color: #007bff;
-            font-weight: bold;
         }
         .color-table {
             width: 100%;
@@ -71,61 +72,66 @@
             margin-top: 20px;
         }
         .lists ul, .lists ol {
-            padding-left: 20px;
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
         }
         .lists li {
-            margin-bottom: 10px;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .lists li:last-child {
+            border-bottom: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="grid">
+        <div class="header">
+            <h1>Modern HTML Layout</h1>
+        </div>
+        <div class="section">
             <!-- Span Example -->
-            <div class="box">
-                <div class="box-header">Span Example</div>
-                <div class="box-content">
-                    <p>This is an example of a <span>span element</span> used to highlight text within a paragraph.</p>
-                </div>
+            <div>
+                <h2>Span Example</h2>
+                <p>This is an example of a <span style="color: #007bff;">span element</span> used to highlight text within a paragraph.</p>
             </div>
 
             <!-- Color Table -->
-            <div class="box">
-                <div class="box-header">Color Table</div>
-                <div class="box-content">
-                    <table class="color-table">
-                        <thead>
-                            <tr>
-                                <th>Color Name</th>
-                                <th>Color Sample</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Red</td>
-                                <td><div class="color-box" style="background-color: red;"></div></td>
-                            </tr>
-                            <tr>
-                                <td>Green</td>
-                                <td><div class="color-box" style="background-color: green;"></div></td>
-                            </tr>
-                            <tr>
-                                <td>Blue</td>
-                                <td><div class="color-box" style="background-color: blue;"></div></td>
-                            </tr>
-                            <tr>
-                                <td>Yellow</td>
-                                <td><div class="color-box" style="background-color: yellow;"></div></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div>
+                <h2>Color Table</h2>
+                <table class="color-table">
+                    <thead>
+                        <tr>
+                            <th>Color Name</th>
+                            <th>Color Sample</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Red</td>
+                            <td><div class="color-box" style="background-color: red;"></div></td>
+                        </tr>
+                        <tr>
+                            <td>Green</td>
+                            <td><div class="color-box" style="background-color: green;"></div></td>
+                        </tr>
+                        <tr>
+                            <td>Blue</td>
+                            <td><div class="color-box" style="background-color: blue;"></div></td>
+                        </tr>
+                        <tr>
+                            <td>Yellow</td>
+                            <td><div class="color-box" style="background-color: yellow;"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <!-- Lists -->
-            <div class="box">
-                <div class="box-header">Lists</div>
-                <div class="box-content lists">
+            <div>
+                <h2>Lists</h2>
+                <div class="lists">
                     <h3>Unordered List</h3>
                     <ul>
                         <li>Item 1</li>
