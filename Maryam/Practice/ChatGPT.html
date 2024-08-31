@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .color-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .color-table th, .color-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .color-table th {
+            background-color: #f4f4f4;
+        }
+        .color-box {
+            height: 50px;
+            width: 50px;
+            display: inline-block;
+        }
+        .list-container {
+            margin-top: 20px;
+        }
+        .list-container ul, .list-container ol {
+            margin: 0;
+            padding: 0;
+        }
+        .list-container li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Elements Example</h1>
+
+        <!-- Span Example -->
+        <p>Here is a <span style="color: red;">span element</span> within a paragraph.</p>
+
+        <!-- Color Table -->
+        <h2>Color Table</h2>
+        <table class="color-table">
+            <thead>
+                <tr>
+                    <th>Color Name</th>
+                    <th>Color Sample</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Red</td>
+                    <td><div class="color-box" style="background-color: red;"></div></td>
+                </tr>
+                <tr>
+                    <td>Green</td>
+                    <td><div class="color-box" style="background-color: green;"></div></td>
+                </tr>
+                <tr>
+                    <td>Blue</td>
+                    <td><div class="color-box" style="background-color: blue;"></div></td>
+                </tr>
+                <tr>
+                    <td>Yellow</td>
+                    <td><div class="color-box" style="background-color: yellow;"></div></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Lists -->
+        <div class="list-container">
+            <h2>Unordered List</h2>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+
+            <h2>Ordered List</h2>
+            <ol>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
