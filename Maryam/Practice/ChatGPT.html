@@ -1,100 +1,131 @@
-<!DOCTYPE html>
+<!D<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Elements Example</title>
+    <title>HTML Elements Showcase</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
         }
-        .container {
+        .wrapper {
             width: 80%;
-            margin: auto;
+            margin: 20px auto;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            color: #333;
+        }
+        .info-section {
+            margin-bottom: 30px;
+        }
+        .info-section span {
+            font-weight: bold;
+            color: #0056b3;
         }
         .color-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
         }
         .color-table th, .color-table td {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
         }
         .color-table th {
-            background-color: #f4f4f4;
+            background-color: #f2f2f2;
+            color: #333;
         }
         .color-box {
-            height: 50px;
-            width: 50px;
+            height: 30px;
+            width: 30px;
+            border-radius: 4px;
             display: inline-block;
         }
-        .list-container {
+        .lists {
             margin-top: 20px;
         }
-        .list-container ul, .list-container ol {
+        .lists ul, .lists ol {
             margin: 0;
             padding: 0;
+            list-style-position: inside;
         }
-        .list-container li {
-            margin-bottom: 10px;
+        .lists li {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .lists li:last-child {
+            border-bottom: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>HTML Elements Example</h1>
+    <div class="wrapper">
+        <div class="header">
+            <h1>HTML Elements Showcase</h1>
+        </div>
 
         <!-- Span Example -->
-        <p>Here is a <span style="color: red;">span element</span> within a paragraph.</p>
+        <div class="info-section">
+            <p>This is an example of a <span>span element</span> used to highlight text in a paragraph.</p>
+        </div>
 
         <!-- Color Table -->
-        <h2>Color Table</h2>
-        <table class="color-table">
-            <thead>
-                <tr>
-                    <th>Color Name</th>
-                    <th>Color Sample</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Red</td>
-                    <td><div class="color-box" style="background-color: red;"></div></td>
-                </tr>
-                <tr>
-                    <td>Green</td>
-                    <td><div class="color-box" style="background-color: green;"></div></td>
-                </tr>
-                <tr>
-                    <td>Blue</td>
-                    <td><div class="color-box" style="background-color: blue;"></div></td>
-                </tr>
-                <tr>
-                    <td>Yellow</td>
-                    <td><div class="color-box" style="background-color: yellow;"></div></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="info-section">
+            <h2>Color Table</h2>
+            <table class="color-table">
+                <thead>
+                    <tr>
+                        <th>Color Name</th>
+                        <th>Color Sample</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Orange</td>
+                        <td><div class="color-box" style="background-color: orange;"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Purple</td>
+                        <td><div class="color-box" style="background-color: purple;"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Cyan</td>
+                        <td><div class="color-box" style="background-color: cyan;"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Pink</td>
+                        <td><div class="color-box" style="background-color: pink;"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <!-- Lists -->
-        <div class="list-container">
+        <div class="lists">
             <h2>Unordered List</h2>
             <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
             </ul>
 
             <h2>Ordered List</h2>
             <ol>
-                <li>First</li>
-                <li>Second</li>
-                <li>Third</li>
+                <li>First step</li>
+                <li>Second step</li>
+                <li>Third step</li>
             </ol>
         </div>
     </div>
