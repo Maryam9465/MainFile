@@ -6,6 +6,7 @@
     <title>KU Registration Form</title>
     <style>
       .Heading1 {
+        font-family: arial;
         text-align: center;
         color: #0056b3;
         font-size: 27px;
@@ -17,13 +18,17 @@
         height: 297mm;
         margin: auto;
         padding: 20mm;
-        box-sizing: border-box;
+        background-color: #fff;
+        border: 1px solid #b1b1b1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #7a7a7a;
       }
       img {
         display: block;
         margin: auto;
       }
       .Form {
+        font-family: arial;
         color: black;
         padding: 20px;
         margin-bottom: 10px;
@@ -45,11 +50,13 @@
         background-color: #003d7a;
       }
       label {
+        font-family: arial;
         display: block;
         margin-top: 10px;
         margin-bottom: 5px;
       }
-      .Programs, input[type="text"] {
+      input[type="text"] {
+        font-family: arial;
         width: 100%;
         padding: 9px;
         margin-bottom: 5px;
@@ -79,9 +86,9 @@
                 <label for="PN">Phone Number:</label>
                 <input type="text" id="PN" name="PN"><br>
 
-                <label for="Programs">Choose Your Program:</label>
-                <input list="Programs" id="Programs" name="Programs">
-                <datalist id="Programs">
+                <label for="programs">Choose Your Program:</label>
+                <input list="programs" id="programs" name="programs">
+                <datalist id="programs">
                     <option value="Bachelor of Science in Aerospace Engineering">
                     <option value="Bachelor of Science in Chemical Engineering">
                     <option value="Bachelor of Science in Civil Engineering">
@@ -100,8 +107,8 @@
                     <option value="Bachelor of Science in Applied Mathematics, Statistics, and Data Science">
                     <option value="Bachelor of Science in Biomedical Engineering">
                     <option value="Bachelor of Science in Cell and Molecular Biology">
-                </datalist><br>
-                <br>
+                </datalist>
+                <br><br>
                 <input type="submit" value="Submit">
             </form>
         </div>
