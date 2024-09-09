@@ -5,47 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KU Registration Form</title>
     <style>
-
+      .Heading1 {
+        text-align: center;
+        color: #0056b3;
+        font-size: 27px;
+        margin-bottom: 10px;
+        margin-top: 2px;
+      }
+      .A4page {
+        width: 210mm;
+        height: 297mm;
+        margin: auto;
+        padding: 20mm;
+        box-sizing: border-box;
+      }
+      img {
+        display: block;
+        margin: auto;
+      }
+      .Form {
+        color: black;
+        padding: 20px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size:120%;
+      }
+      input[type="submit"] {
+        background-color: #0056b3;
+        color: whitesmoke;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      input[type="submit"]:hover {
+        background-color: #003d7a;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .Programs, input[type="text"] {
+        width: 100%;
+        padding: 9px;
+        margin-bottom: 5px;
+        border: 1.5px solid #ccc;
+        border-radius: 5px;
+      }
     </style>
 </head>
 <body>
-    <img scr="KU.png" alt="KU logo" width="200" height="400">
-    <h1 class = "KUS";>Khalifa University Students Registration Form</h1>
-    
-    <form>
-        <label >First name:</label><br>
-        <input type="text"><br>
-        <label>Last name:</label><br>
-        <input type="text"><br>
-        <label>KU ID:</label><br>
-        <input type="text"><br>
-        <label>Email:</label><br>
-        <input type="text"><br>
-        <label for="Programs">Choose Your Program:</label><br>
-        <input list="Programs" name="Programs">
-  <datalist id="Programs" name="Progrmas">
-    <option value="1">Bachelor of Science in Aerospace Engineering</option>
-    <option value="2">Bachelor of Science in Chemical Engineering</option>
-    <option value="3">Bachelor of Science in Civil Engineering</option>
-    <option value="4">Bachelor of Science in Electrical Engineering</option>
-    <option value="5">Bachelor of Science in Engineering Systems And Management</option>
-    <option value="6">Bachelor of Science in Mechanical Engineering</option>
-    <option value="7">Bachelor of Science in Petroleum Engineering</option>
-    <option value="8">Bachelor of Science in Chemistry</option>
-    <option value="9">Bachelor of Science in Physics</option>
-    <option value="10">Bachelor of Science in Earth and Planetary Sciences</option>
-    <option value="11">Bachelor of Science in Computer Engineering</option>
-    <option value="12">Bachelor of Science in Computer Engineering in Software Systems Concentration</option>
-    <option value="13">B.Sc. In Robotics And Artificial Intelligence (AI)</option>
-    <option value="14">Bachelor of Science in Computer Science in Artificial Intelligence Concentration</option>
-    <option value="15">Bachelor of Science in Computer Science in Cybersecurity Concentration</option>
-    <option value="16">Bachelor of Science in Applied Mathematics, Statistics, and Data Science</option>
-    <option value="17">Bachelor of Science in Biomedical Engineering</option>
-    <option value="18">Bachelor of Science in Cell and Molecular Biology</option>
-  </datalist><br>
-    <br><input type="submit">
+    <div class="A4page">
+        <img src="KU.png" alt="KU logo" width="200" height="auto"> <!-- Fixed 'scr' to 'src' -->
+        <h1 class="Heading1">Khalifa University Students Registration Form</h1>
+        <div class="Form">
+            <form>
+                <label for="FN">First Name:</label>
+                <input type="text" id="FN" name="FN"><br>
 
-    </form> 
+                <label for="LN">Last Name:</label>
+                <input type="text" id="LN" name="LN"><br>
 
+                <label for="KUID">KU ID:</label>
+                <input type="text" id="KUID" name="KUID"><br>
+
+                <label for="Email">Email:</label>
+                <input type="text" id="Email" name="Email"><br>
+
+                <label for="PN">Phone Number:</label>
+                <input type="text" id="PN" name="PN"><br>
+
+                <label for="Programs">Choose Your Program:</label>
+                <input list="Programs" id="Programs" name="Programs">
+                <datalist id="Programs">
+                    <option value="Bachelor of Science in Aerospace Engineering">
+                    <option value="Bachelor of Science in Chemical Engineering">
+                    <option value="Bachelor of Science in Civil Engineering">
+                    <option value="Bachelor of Science in Electrical Engineering">
+                    <option value="Bachelor of Science in Engineering Systems And Management">
+                    <option value="Bachelor of Science in Mechanical Engineering">
+                    <option value="Bachelor of Science in Petroleum Engineering">
+                    <option value="Bachelor of Science in Chemistry">
+                    <option value="Bachelor of Science in Physics">
+                    <option value="Bachelor of Science in Earth and Planetary Sciences">
+                    <option value="Bachelor of Science in Computer Engineering">
+                    <option value="Bachelor of Science in Computer Engineering in Software Systems Concentration">
+                    <option value="B.Sc. In Robotics And Artificial Intelligence (AI)">
+                    <option value="Bachelor of Science in Computer Science in Artificial Intelligence Concentration">
+                    <option value="Bachelor of Science in Computer Science in Cybersecurity Concentration">
+                    <option value="Bachelor of Science in Applied Mathematics, Statistics, and Data Science">
+                    <option value="Bachelor of Science in Biomedical Engineering">
+                    <option value="Bachelor of Science in Cell and Molecular Biology">
+                </datalist><br>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
